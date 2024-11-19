@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KinoTime</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style_contact.css">
+    <link rel="icon" href="img/cinema.png" type="image/x-icon">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="index.html" style="color: grey;">KinoTime</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html" style="color: grey;">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="location.html" style="color: grey;">Map</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review.html" style="color: grey;">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="releases.html" style="color: grey;">Upcoming Releases</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html" style="color: grey;">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html" style="color: grey;">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="col-lg-6">
+        <img src="img/logo.png" alt="Logo" class="img-fluid d-block">
+    </div>
+    <div class="col-lg-6">
+        <div class="container">
+            <form id="Form1">
+                <h3>CONTACT US</h3>
+                <div class="line"></div>
+                <input type="text" placeholder="Email" required>
+                <input type="text" placeholder="User name" required>
+                <textarea rows="5" placeholder="Message" required></textarea>
+                <div class="btn-box">
+                    <button type="button" id="Next1">Next</button>
+                </div>
+            </form>
+
+            <form id="Form2">
+                <h3>PERSONAL INFO</h3>
+                <div class="line"></div>
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Surname" required>
+                <textarea rows="5" placeholder="Additional information" required></textarea>
+                <div class="btn-box">
+                    <button type="button" id="Back1">Back</button>
+                    <button type="button" id="Next2">Next</button>
+                </div>
+            </form>
+
+            <form id="Form3">
+                <h3>SOCIAL LINKS</h3>
+                <div class="line"></div>
+                <input type="text" placeholder="Instagram" required>
+                <input type="text" placeholder="Telegram" required>
+                <textarea rows="5" placeholder="Another social links" required></textarea>
+                <div class="btn-box">
+                    <button type="button" id="Back2">Back</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+
+            <div class="step-row">
+                <div id="progress"></div>
+                <div class="step-col"><small>Step 1</small></div>
+                <div class="step-col"><small>Step 2</small></div>
+                <div class="step-col"><small>Step 3</small></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer class="text-center mt-5">
+    <div class="footer-content">
+        <p>© 2024 KinoTime. Created by:</p>
+        <ul>
+            <li>Yerkezhan Akhmetova</li>
+            <li>Akmagambetova Aliya</li>
+        </ul>
+    </div>
+</footer>
+
+<script src="contact.js"></script>
+</body>
+</html>

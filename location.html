@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KinoTime - Movie Map</title>
+  <link rel="icon" href="img/cinema.png" type="image/x-icon">
+  <link rel="stylesheet" href="location.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Leaflet Libraries -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="index.html" style="color: grey;">KinoTime</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="location.html">Map</a></li>
+      <li class="nav-item"><a class="nav-link" href="review.html">Reviews</a></li>
+      <li class="nav-item"><a class="nav-link" href="releases.html">Upcoming Releases</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="login.html" style="color: grey;">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<section id="movie-map" class="container">
+  <h2 class="text-center text-primary">Explore Iconic Movie Locations</h2>
+  <p class="text-center text-muted">Click on markers to discover where movies were filmed!</p>
+  <div class="filter-container">
+    <label for="genre-filter">Filter by Genre:</label>
+    <select id="genre-filter">
+      <option value="all">All</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Drama">Drama</option>
+      <option value="Action">Action</option>
+    </select>
+  </div>
+  <div id="map"></div>
+  <div class="favorites-container">
+    <h4>Your Favorite Locations:</h4>
+    <ul id="favorites-list"></ul>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <p>© 2024 KinoTime. Created by:</p>
+    <ul>
+      <li>Yerkezhan Akhmetova</li>
+      <li>Akmagambetova Aliya</li>
+    </ul>
+  </div>
+</footer>
+
+<script src="location.js"></script>
+</body>
+</html>

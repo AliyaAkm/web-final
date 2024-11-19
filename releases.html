@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KinoTime</title>
+    <link rel="icon" href="img/cinema.png" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style_releases.css">
+    <style>
+        .release-list li {
+            opacity: 0; /* Изначально скрыт */
+            transform: translateY(20px); /* Начинает немного ниже */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Анимация для прозрачности и позиции */
+        }
+
+        .release-list li.visible {
+            opacity: 1; /* Появляется */
+            transform: translateY(0); /* Перемещается в исходное положение */
+        }
+        .number-sorter button,
+        .color-changer button {
+            transition: background-color 0.3s, transform 0.3s; /* Эффект перехода */
+        }
+
+        .number-sorter button:hover,
+        .color-changer button:hover {
+            background-color: #5a8c9e; /* Цвет фона при наведении */
+            transform: scale(1.05); /* Немного увеличивается при наведении */
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="index.html" style="color: grey;">KinoTime</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html" style="color: grey;">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="location.html" style="color: grey;">Map</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review.html" style="color: grey;">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="releases.html" style="color: grey;">Upcoming Releases</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html" style="color: grey;">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html" style="color: grey;">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <section class="releases">
+        <h1>Release calendar</h1>
+        <h2>Coming Soon in Cinemas</h2>
+        <ul class="release-list">
+            <li>
+                <div class="movie">
+                    <img src="img/film1.webp" alt="TheatreHD: Cherry Orchard">
+                    <div class="movie-info">
+                        <h3>TheatreHD: Cherry Orchard</h3>
+                        <p>15 September</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="movie">
+                    <img src="img/film2.webp" alt="Fox">
+                    <div class="movie-info">
+                        <h3>Fox</h3>
+                        <p>16 September</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="movie">
+                    <img src="img/film3.webp" alt="Parents of Parents">
+                    <div class="movie-info">
+                        <h3>Parents of Parents</h3>
+                        <p>16 September</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="movie">
+                    <img src="img/film4.webp" alt="Substance">
+                    <div class="movie-info">
+                        <h3>Substance</h3>
+                        <p>19 September</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="movie">
+                    <img src="img/film5.webp" alt="Graph Monte-Kristo">
+                    <div class="movie-info">
+                        <h3>Graph Monte-Kristo</h3>
+                        <p>19 September</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="movie">
+                    <img src="img/film6.webp" alt="Plague">
+                    <div class="movie-info">
+                        <h3>Plague</h3>
+                        <p>19 September</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="movie">
+                    <img src="img/film7.webp" alt="Hellboy: Gorbun's Curse">
+                    <div class="movie-info">
+                        <h3>Hellboy: Gorbun's Curse</h3>
+                        <p>19 September</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="movie">
+                    <img src="img/film8.webp" alt="In the Fog">
+                    <div class="movie-info">
+                        <h3>In the Fog</h3>
+                        <p>19 September</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="movie">
+                    <img src="img/film9.webp" alt="Paris, Texas">
+                    <div class="movie-info">
+                        <h3>Paris, Texas</h3>
+                        <p>19 September</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="movie">
+                    <img src="img/film10.webp" alt="Cool Princess">
+                    <div class="movie-info">
+                        <h3>Cool Princess</h3>
+                        <p>19 September</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="number-sorter">
+        <h2>Number Sorting Tool</h2>
+        <form id="sortForm">
+            <label for="numbers">Enter numbers (comma separated):</label>
+            <input type="text" id="numbers" placeholder="e.g. 3, 1, 4, 1, 5">
+            <label for="order">Sort Order:</label>
+            <select id="order">
+                <option value="ascending">Ascending</option>
+                <option value="descending">Descending</option>
+            </select>
+            <button type="submit">Sort Numbers</button>
+        </form>
+        <div class="result" id="result"></div>
+    </section>
+
+    <section class="color-changer">
+        <h2>Change Background Color</h2>
+        <button id="changeColorBtn">Change Color</button>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2024 KinoTime. Created by:</p>
+        <ul>
+            <li>Yerkezhan Akhmetova</li>
+            <li>Akmagambetova Aliya</li>
+        </ul>
+    </div>
+</footer>
+<script src="releases.js"></script>
+</body>
+</html>

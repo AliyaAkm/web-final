@@ -1,0 +1,204 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: #eff4fd;
+        }
+
+        nav {
+            display: flex;
+            width: 100%;
+            margin: auto;
+            padding: 20px 0;
+            align-items: center;
+            justify-content: center;
+            background-color: #eff4fd;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .releases {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .releases h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .releases h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .release-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .movie {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .movie img {
+            width: 60px;
+            height: 90px;
+            object-fit: cover;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+
+        .movie-info {
+            flex-grow: 1;
+        }
+
+        .movie-info h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .movie-info p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .number-sorter {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .number-sorter h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .number-sorter label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .number-sorter input[type="text"],
+        .number-sorter select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .number-sorter button {
+            width: 100%;
+            padding: 10px;
+            background-color: #76a5af;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .number-sorter button:hover {
+            background-color: #5a8c9e;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+        }
+
+        .color-changer {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center; /* Выравнивание текста по центру */
+        }
+
+        .color-changer button {
+            width: 100%;
+            padding: 10px;
+            background-color: #76a5af;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .color-changer button:hover {
+            background-color: #5a8c9e;
+        }
+
+        footer {
+            background-color: #eff4fd;
+            color: #111;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 0;
+        }
+
+        .footer-content {
+            margin-bottom: 10px;
+        }
+
+        .footer-content p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .footer-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-content ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .footer-content ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-content ul li a:hover {
+            text-decoration: underline;
+        }

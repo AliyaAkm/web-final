@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="218004ed-8dc6-4e20-915f-b52f80202da9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/location.css" beforeDir="false" afterPath="$PROJECT_DIR$/location.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/location.html" beforeDir="false" afterPath="$PROJECT_DIR$/location.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/location.js" beforeDir="false" afterPath="$PROJECT_DIR$/location.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/releases.html" beforeDir="false" afterPath="$PROJECT_DIR$/releases.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/releases.js" beforeDir="false" afterPath="$PROJECT_DIR$/releases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/review.js" beforeDir="false" afterPath="$PROJECT_DIR$/review.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style_contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/style_contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style_review.css" beforeDir="false" afterPath="$PROJECT_DIR$/style_review.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2mR5O5PA4OTFiTHcAjYCStRLHue" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.contact.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.location.html.executor": "Run",
+    "JavaScript Debug.login.html.executor": "Run",
+    "JavaScript Debug.profile.html.executor": "Run",
+    "JavaScript Debug.releases.html.executor": "Run",
+    "JavaScript Debug.review.html.executor": "Run",
+    "Node.js.contact.js.executor": "Run",
+    "Node.js.index.js.executor": "Run",
+    "Node.js.review.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "<unknown>",
+    "last_opened_file_path": "C:/Users/Анель/Desktop/web assig5",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Анель\Desktop\web assig5\img" />
+      <recent name="C:\Users\Анель\Desktop\web assig5" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-WS-242.21829.149" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="218004ed-8dc6-4e20-915f-b52f80202da9" name="Changes" comment="" />
+      <created>1727026512768</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727026512768</updated>
+      <workItem from="1727026514150" duration="304000" />
+      <workItem from="1729516387869" duration="4229000" />
+      <workItem from="1729527801348" duration="852000" />
+      <workItem from="1729671971690" duration="28000" />
+      <workItem from="1729775717955" duration="3390000" />
+      <workItem from="1729779348405" duration="122000" />
+      <workItem from="1729959633844" duration="20000" />
+      <workItem from="1730032108762" duration="3552000" />
+      <workItem from="1730189874432" duration="34000" />
+      <workItem from="1730191868648" duration="1222000" />
+      <workItem from="1730207855168" duration="4000" />
+      <workItem from="1730219251043" duration="97000" />
+      <workItem from="1730233816921" duration="2426000" />
+      <workItem from="1730275204030" duration="684000" />
+      <workItem from="1730276997199" duration="4703000" />
+      <workItem from="1730284733020" duration="114000" />
+      <workItem from="1730316382016" duration="8000" />
+      <workItem from="1730880599533" duration="2476000" />
+      <workItem from="1731947975290" duration="12706000" />
+      <workItem from="1732008502599" duration="17349000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

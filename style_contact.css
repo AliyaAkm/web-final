@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: url('img/back.webp') no-repeat center center/cover;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #eff4fd;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+/* Form */
+.row{
+    margin-top: 150px;
+  }
+
+  .container{
+    width: 560px;
+    height: 650px;
+    margin: 8% auto;
+    background: #fff;
+    border: 5px solid #999;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  h3{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #49497e;
+  }
+  .line{
+    width: 150px;
+    height: 4px;
+    background: #cde1ec;
+    border-color: #cde1ec;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+  .container form{
+    width: 460px;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    transition: 0.5s;
+  }
+  form input{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+  }
+  form textarea{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+  }
+  ::placeholder{
+    color: #777;
+  }
+  .btn-box{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+  }
+  form button{
+    width: 130px;
+    height: 50px;
+    margin: 10px;
+    background: #cde1ec;
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  #Form2{
+    left: 560px;
+  }
+  #Form3{
+    left: 560px;
+  }
+  .step-row{
+    width: 501px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px #000;
+    position: relative;
+  }
+  .step-col{
+    font-size: 24px;
+    width: 167px;
+    text-align: center;
+    color: #333;
+    position: relative;
+  }
+  #progress{
+    position: absolute;
+    height: 100%;
+    width: 166px;
+    background: #cde1ec;
+    transition: 1s;
+  }
+  #progress::after{
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid #cde1ec;
+  }
+
+/* Стили для сообщений об ошибках */
+#errorMessages {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: red;
+    font-size: 14px;
+}
+
+footer {
+    background-color: #eff4fd;
+    color: #111;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+}
+
+.footer-content {
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-content ul li a {
+    color: #555; /* Изменен цвет на более заметный */
+    text-decoration: none;
+}
+
+.footer-content ul li a:hover {
+    text-decoration: underline;
+}

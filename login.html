@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/cinema.png" type="image/x-icon">
+  <link href="login.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Login & Registration</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="index.html" style="color: grey;">KinoTime</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="location.html">Map</a></li>
+      <li class="nav-item"><a class="nav-link" href="review.html">Reviews</a></li>
+      <li class="nav-item"><a class="nav-link" href="releases.html">Upcoming Releases</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="login-register">
+  <!-- Login Section -->
+  <div class="container">
+    <form id="loginForm">
+      <h3>LOGIN</h3>
+      <div class="line"></div>
+      <input type="text" id="loginUsername" placeholder="Username" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <div class="btn-box">
+        <button type="submit" id="login-btn">Login</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Registration Section -->
+  <div class="container">
+    <form id="registerForm">
+      <h3>REGISTER</h3>
+      <div class="line"></div>
+      <input type="text" id="regUsername" placeholder="Username" required>
+      <input type="password" id="regPassword" placeholder="Password" required>
+      <input type="password" id="regPasswordRepeat" placeholder="Repeat Password" required>
+      <div class="btn-box">
+        <button type="submit" id="register-btn">Register</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="login.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

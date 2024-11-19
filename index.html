@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KinoTime</title>
+    <link rel="icon" href="img/cinema.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #map {
+            height: 600px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="index.html" style="color: grey;">KinoTime</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html" style="color: grey;">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="location.html" style="color: grey;">Map</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review.html" style="color: grey;">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="releases.html" style="color: grey;">Upcoming Releases</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html" style="color: grey;">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+<body class="day-theme">
+<main class="main-content">
+    <div id="greeting"></div>
+    <h1>Welcome to KinoTime!</h1>
+    <hr>
+    <div id="date-time" class="text-center mt-3"></div>
+    <button id="theme-toggle">Switch to Day Theme</button>
+</main>
+
+<section class="highlighted-movies">
+    <h2 class="section-heading">Top 5 Films This Week</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col mb-4">
+                <div class="card">
+                    <a href="https://www.kinopoisk.ru/film/251733/" target="_blank">
+                        <img onmouseover="playAvatarSound()" class="card-img-top" src="https://kinopoisk-ru.clstorage.net/1v61P1I83/6afbaeL9ED/H7DBA4DCSs1qPfit7UzARN9yIVrxPc7NLxBcuKpimvAPzvPD3vMlFpLXTurpF45voFX-YOUvn6RoyXZ1AmLJT13ijVPfiFaUO2Pj5r8bkxDCaS0L5iqGm2sNT-XxPbXAJ_zasfjMDTa-tgiopwDVNPYVum7oOsK7e90EGUFJiDIshsY0pPgV700WlKLCSNVVzhcmbtxf2v0cVnSntl-s9AzK4J_C1CUHspMorIVN7jLAGYxp2zv_wUT-IS4WQbMLPb_0JpbDKfJMO6SR6mr0deQ5DXnCY-LSMX95vahpstoU-92N4fYvHZygMJm5XvsZ6heCbsMQ-tlAxzUJKVOXFA2j1iCl6Cf5RRuOjdZE5VT1Kil060jjyy92T4aQfLjdEu_ct_7YMgmUsTOSt236Efo3hnLQDs3dQvshNyZTrgoxhtgqi8Qx7VYBm5j5VMVtyBY2eMF8z8sSSUOliUCC7TP1_6_-9gUHtrYnlKd01zfiAIZnzQ352VvCOD4Vd6wOAIvZDIbiEfd2Fp2-9m_-Veg6GVjhQ8zDKHJYvK1vr_I0zcyc8NIhJKOrMpqCWc0V2Rm9S9QDzM9o7TYqJkKULz-w0zu_6SbBZyWeoeVqy3vMLShF_Ff97SxxVpWxR7_xLOzvm_DuED2Yix2oqkzLL8gyrVPLLML0b8w6HgVZmjgch_4Ngf8PwVgig6f4es1xwDMeUc582O0iWk2QiX-T1RDl2q3A9yIio5AGqJtl0hnLPo1F9wDH8nzaCAE5b5QnPpX0GpnWFMh3K4ea5UTvW846GWrNYOHDNFFSq4tYnPcf3tqo3s4TIYSyL769f8ssyBKBYsYf0edYzB02IkGbOD6d9hOa3wPFSwu_nvpM1GzqDSNJ7Hbx_ixaX6Gyb7nKPs7ilPTMLhuvixKvqHTSK9wfp2rGPvj-RN0MBTJOrzQwqdcJkN0p-k0kgbf9SM1l7Ss1cc9l7_4vRFO0rHWG1DT_9onB_wAAsaErmbVhzxv0MI9Y1w7T22XfOQMoVbY0O5b-EJ_lDfVqJZ2V40jDWeQ7HU7xcd34HXxHiZF8utce6c-m7e8LGYeAHJqoRfcf0D2nWfMg5P9o3hANGVqIIyWg3RGZ_ybtXS-UguBE_XHSGwx863XT_zVUXLewRq7FC_H7qtD_NgeirTumqUXrD-kIuHTZPsfURcITIAxxjTgDuc8YtMgyyFg5mrHbTOdS0xI3UetGyuA4UVyLnHqn0DDV4IDD_Cw_raw1pYdI7A_PDIBN6gXz2EzqDicPVpYpE4PmKYThMdltI7mb42bFcu0pNlnMXsXwKlJ0hYhJsuoQ7f2g2fYOOLOzEaiXVvoZ0y-nVvQQ5N9M2hYXEGKRFyem7wiWxwPqTQeEkulh8GXNFyRJ83fnwChaU7ejbpDIAurBh8HINB65rgaWsljGFfQ0iHjmEd3gZd82ACZymio6gf4ks8Ez1kIqmpbuR-tTwh0oV85Y4PooRHalsHSlygzZyobhzxAzlbUnvKhK0Dn-D4RM9Q3M7Xz8DyggTpA6JYD6NZnQAO1qNrWOwHHMa_0VLGfEd8ffCnVwoI9Houoi-PWJ288BBrKrFbaoYvc1wCO6Ufkz6_pj7i4tFUOzNDG_9w-I9S7RTSaFtdhjxU7RJip8z3n9xjN2cZK8WrrmLvvan_TyHTu2nAeRml37NuoggELVH_P3fckiNQ9smCUipPoRiPQB4nctg5z4W-BP1wUfbtF48P4KdFafrE6N5izp85j8xwIEnp0UuIFr9A_xDJxv0Afn8WbfHTcrSrYvIrrtIYD7A9FPD52WxEH9Q94WH2zfWPrFK1F6vr5ChdYy0fSl3M0uGo-tNZuZTf8b0wqDY_Q70Pl5wDYVA1OdJCqm0i63xTT0SAW7pNhL_WvhOihb6WPI-xpHc76AQ6fTCc3Put3mBz2RsTqpoUn5LeoUvWjWIcXxe8c8KgRviyYjn_EzpNw86EkJl6Lnd-dH6QwKSNZB_dIyaHCHg0Wf2xfq3pbG2Rw1uY8ZvaNF0jrJE5lF7h3Y5UD5NSowQ7UVM5D6MKTQIPZgDZuf4EHldd8MDkrKa93ZCGdtvbB_ofERzNeJ-fgvJaK0Mp2bdu0NwAqgSc8EweRD2ywRE1i4CyWaxSmUwin2aiWkjtVx00jLFA1v6XfL5RN5eLuDfqjTM_rgiN_HFj2BgRy9pmnMK_w9mEjLGP3UQscYIyNvkAYoq-EUm_4C0lQslJv8Svdl7jIBVcZWweoob3GQqG6AyyjW2oHCzCEAp5M9roNi3ArzI5xGwwjO42DKHDQnZ4YSPJDyJJDlJexGJb-bz2zFScEeFk79QMfvNlpzgKt5jfsH-d2JwccTHZKhNoaaZNo_3jCLZdk-3OVN3w8OK1SbADOS7yul-gnmegCnu-V01UfoPydH03vRyTNbWKa2QqbKAdT6v_HNAAeOoAa8kmDtMtoDjHjiLMzZZ_8vCBFHrCohtfszpvsF02oghbb7YOJk8w4gR-9w2uw-ZGaUgX6T_TLawaXg0CMVlIkyqJtX2jfTLaZR8CLs2UfHITAod5c3KqDPAbTHEM5XN7ic-3LlTNQkFlLSZ_v4NHlQo4B4nvkM7fS729gSE5-9DLepXc4t6AmsRMoO8_Fo_zAlGUiqICuV0Sy83y3PQSiapNRb5mjuKi1v9VfzzDhafqeARYHwA-X0os3ODieikT2mtGfQK_0vo0nIGvrHTto1NCV2qioMpfkWkMUi4Xc7v5bpaPBb5BIgT8Fq8PINcHqQj0SJzzP307zE0yEfkYIenoRm5D_WALB27h_hwErFHSsoVJMqM7PaFZXQJ_JNLbO56EvWRMAzN1fDYPjbNHhmnIh-nvIy58-03_kePrKAOomjV9wNzgq4bMYHxd1cxz8ACG-vID2Z5QOR3QniZz6Dsc9a8FXPHSp00Vbl_ytHWbe2fproB8XXt9jvLRiCtBG7uUzNL_cQoW37DNzPR-U" alt="Фильм 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Avatar (2009)</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <a href="https://www.kinopoisk.ru/film/456/" target="_blank">
+                        <img onmouseover="playGoneWithTheWindSound()" class="card-img-top"  src="https://kinopoisk-ru.clstorage.net/1v61P1I83/6afbaeL9ED/H7DBA4DCSs1qPfit7UzARN9yIVrxPc7NLxBcuKpimvAPzvPD3vMlFpLXS-jnGo5rqVX6ZLkty604mnZ1VGPPT13ngFLfiQeXOGPg4bhEkkTCOHYKtieGm2sNT-XxPbXAJ_zasfjMDTa-tgiopwDVNPYVum7oOsK7e90EGUFJiDIshsY0pPgV700WlKLCSNVVzhcmbtxf2v0cVnSntl-s9AzK4J_C1CUHspMorIVN7jLAGYxp2zv_wUT-IS4WQbMLPb_0JpbDKfJMO6SR6mr0deQ5DXnCY-LSMX95vahpstoU-92N4fYvHZygMJm5XvsZ6heCbsMQ-tlAxzUJKVOXFA2j1iCl6Cf5RRuOjdZE5VT1Kil060jjyy92T4aQfLjdEu_ct_7YMgmUsTOSt236Efo3hnLQDs3dQvshNyZTrgoxhtgqi8Qx7VYBm5j5VMVtyBY2eMF8z8sSSUOliUCC7TP1_6_-9gUHtrYnlKd01zfiAIZnzQ352VvCOD4Vd6wOAIvZDIbiEfd2Fp2-9m_-Veg6GVjhQ8zDKHJYvK1vr_I0zcyc8NIhJKOrMpqCWc0V2Rm9S9QDzM9o7TYqJkKULz-w0zu_6SbBZyWeoeVqy3vMLShF_Ff97SxxVpWxR7_xLOzvm_DuED2Yix2oqkzLL8gyrVPLLML0b8w6HgVZmjgch_4Ngf8PwVgig6f4es1xwDMeUc582O0iWk2QiX-T1RDl2q3A9yIio5AGqJtl0hnLPo1F9wDH8nzaCAE5b5QnPpX0GpnWFMh3K4ea5UTvW846GWrNYOHDNFFSq4tYnPcf3tqo3s4TIYSyL769f8ssyBKBYsYf0edYzB02IkGbOD6d9hOa3wPFSwu_nvpM1GzqDSNJ7Hbx_ixaX6Gyb7nKPs7ilPTMLhuvixKvqHTSK9wfp2rGPvj-RN0MBTJOrzQwqdcJkN0p-k0kgbf9SM1l7Ss1cc9l7_4vRFO0rHWG1DT_9onB_wAAsaErmbVhzxv0MI9Y1w7T22XfOQMoVbY0O5b-EJ_lDfVqJZ2V40jDWeQ7HU7xcd34HXxHiZF8utce6c-m7e8LGYeAHJqoRfcf0D2nWfMg5P9o3hANGVqIIyWg3RGZ_ybtXS-UguBE_XHSGwx863XT_zVUXLewRq7FC_H7qtD_NgeirTumqUXrD-kIuHTZPsfURcITIAxxjTgDuc8YtMgyyFg5mrHbTOdS0xI3UetGyuA4UVyLnHqn0DDV4IDD_Cw_raw1pYdI7A_PDIBN6gXz2EzqDicPVpYpE4PmKYThMdltI7mb42bFcu0pNlnMXsXwKlJ0hYhJsuoQ7f2g2fYOOLOzEaiXVvoZ0y-nVvQQ5N9M2hYXEGKRFyem7wiWxwPqTQeEkulh8GXNFyRJ83fnwChaU7ejbpDIAurBh8HINB65rgaWsljGFfQ0iHjmEd3gZd82ACZymio6gf4ks8Ez1kIqmpbuR-tTwh0oV85Y4PooRHalsHSlygzZyobhzxAzlbUnvKhK0Dn-D4RM9Q3M7Xz8DyggTpA6JYD6NZnQAO1qNrWOwHHMa_0VLGfEd8ffCnVwoI9Houoi-PWJ288BBrKrFbaoYvc1wCO6Ufkz6_pj7i4tFUOzNDG_9w-I9S7RTSaFtdhjxU7RJip8z3n9xjN2cZK8WrrmLvvan_TyHTu2nAeRml37NuoggELVH_P3fckiNQ9smCUipPoRiPQB4nctg5z4W-BP1wUfbtF48P4KdFafrE6N5izp85j8xwIEnp0UuIFr9A_xDJxv0Afn8WbfHTcrSrYvIrrtIYD7A9FPD52WxEH9Q94WH2zfWPrFK1F6vr5ChdYy0fSl3M0uGo-tNZuZTf8b0wqDY_Q70Pl5wDYVA1OdJCqm0i63xTT0SAW7pNhL_WvhOihb6WPI-xpHc76AQ6fTCc3Put3mBz2RsTqpoUn5LeoUvWjWIcXxe8c8KgRviyYjn_EzpNw86EkJl6Lnd-dH6QwKSNZB_dIyaHCHg0Wf2xfq3pbG2Rw1uY8ZvaNF0jrJE5lF7h3Y5UD5NSowQ7UVM5D6MKTQIPZgDZuf4EHldd8MDkrKa93ZCGdtvbB_ofERzNeJ-fgvJaK0Mp2bdu0NwAqgSc8EweRD2ywRE1i4CyWaxSmUwin2aiWkjtVx00jLFA1v6XfL5RN5eLuDfqjTM_rgiN_HFj2BgRy9pmnMK_w9mEjLGP3UQscYIyNvkAYoq-EUm_4C0lQslJv8Svdl7jIBVcZWweoob3GQqG6AyyjW2oHCzCEAp5M9roNi3ArzI5xGwwjO42DKHDQnZ4YSPJDyJJDlJexGJb-bz2zFScEeFk79QMfvNlpzgKt5jfsH-d2JwccTHZKhNoaaZNo_3jCLZdk-3OVN3w8OK1SbADOS7yul-gnmegCnu-V01UfoPydH03vRyTNbWKa2QqbKAdT6v_HNAAeOoAa8kmDtMtoDjHjiLMzZZ_8vCBFHrCohtfszpvsF02oghbb7YOJk8w4gR-9w2uw-ZGaUgX6T_TLawaXg0CMVlIkyqJtX2jfTLaZR8CLs2UfHITAod5c3KqDPAbTHEM5XN7ic-3LlTNQkFlLSZ_v4NHlQo4B4nvkM7fS729gSE5-9DLepXc4t6AmsRMoO8_Fo_zAlGUiqICuV0Sy83y3PQSiapNRb5mjuKi1v9VfzzDhafqeARYHwA-X0os3ODieikT2mtGfQK_0vo0nIGvrHTto1NCV2qioMpfkWkMUi4Xc7v5bpaPBb5BIgT8Fq8PINcHqQj0SJzzP307zE0yEfkYIenoRm5D_WALB27h_hwErFHSsoVJMqM7PaFZXQJ_JNLbO56EvWRMAzN1fDYPjbNHhmnIh-nvIy58-03_kePrKAOomjV9wNzgq4bMYHxd1cxz8ACG-vID2Z5QOR3QniZz6Dsc9a8FXPHSp00Vbl_ytHWbe2fproB8XXt9jvLRiCtBG7uUzNL_cQoW37DNzPR-U" alt="Фильм 2">
+                        <div class="card-body">
+                            <h3 class="movie-title">Gone with the wind (1939)</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <a href="https://www.kinopoisk.ru/film/123456/" target="_blank">
+                        <img onmouseover="playLittleWomenSound()" class="card-img-top" src="https://upload.wikimedia.org/wikipedia/ru/b/b1/%D0%9C%D0%B0%D0%BB%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8%D0%B5_%D0%B6%D0%B5%D0%BD%D1%89%D0%B8%D0%BD%D1%8B_%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%2C_2019%29.jpg" alt="Фильм 3">
+                        <div class="card-body">
+                            <h3 class="movie-title">Little women (2016) </h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <a href="https://www.kinopoisk.ru/film/789012/" target="_blank">
+                        <img onmouseover="playTitanicSound()" class="card-img-top" src="https://irecommend.ru/sites/default/files/product-images/3286/1d07d4f3a980.jpg" alt="Фильм 4">
+                        <div class="card-body">
+                            <h3 class="movie-title">Titanik (1997)</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <a href="https://www.kinopoisk.ru/film/345678/" target="_blank">
+                        <img onmouseover="playSpiderManSound()" class="card-img-top" src="https://static.hdrezka.ac/i/2013/7/5/ma6db4d8e1bedgc90h68u.jpg" alt="Фильм 5">
+                        <div class="card-body">
+                            <h3 class="movie-title">New Spider-Man (2018)</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="famous-actors">
+    <h2 class="section-heading">Popular actors</h2>
+    <div class="actors-gallery">
+        <div class="actor-card">
+            <img src="https://funny.klev.club/smeh/uploads/posts/2024-04/funny-klev-club-kpxn-p-smeshnie-kartinki-leonardo-di-kaprio-v-mol-18.jpg" alt="Actor 1">
+            <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B8_%D0%9A%D0%B0%D0%BF%D1%80%D0%B8%D0%BE,_%D0%9B%D0%B5%D0%BE%D0%BD%D0%B0%D1%80%D0%B4%D0%BE" target="_blank">
+                <h3 class="actor-name">Leonardo DiCaprio</h3>
+            </a>
+        </div>
+        <div class="actor-card">
+            <img src="https://uznayvse.ru/images/catalog/2022/2/emma-stone_84.jpg" alt="Actor 2">
+            <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%BE%D1%83%D0%BD,_%D0%AD%D0%BC%D0%BC%D0%B0" target="_blank">
+                <h3 class="actor-name">Emma Stone</h3>
+            </a>
+        </div>
+        <div class="actor-card">
+            <img src="https://insider.ua/wp-content/uploads/2024/07/robert-dauni-ml.jpeg" alt="Actor 3">
+            <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B0%D1%83%D0%BD%D0%B8,_%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82_(%D0%BC%D0%BB%D0%B0%D0%B4%D1%88%D0%B8%D0%B9)" target="_blank">
+                <h3 class="actor-name">Robert Downey Jr.</h3>
+            </a>
+        </div>
+        <div class="actor-card">
+            <img src="https://uznayvse.ru/images/catalog/2022/1/jennifer-aniston_33.jpg" alt="Актер 4">
+            <a href="https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D0%B8%D1%81%D1%82%D0%BE%D0%BD,_%D0%94%D0%B6%D0%B5%D0%BD%D0%BD%D0%B8%D1%84%D0%B5%D1%80" target="_blank">
+                <h3 class="actor-name">Jennifer Aniston</h3>
+            </a>
+        </div>
+    </div>
+    <div id="actors-chart-container" style="height: 400px; margin-top: 20px;"></div>
+</section>
+
+
+<br>
+<h2 align="center">Find information about the movie</h2>
+<div id="movieContainer">
+    <input type="text" id="movieTitle" placeholder="Введите название фильма">
+    <button id="getMovieBtn">Найти фильм</button>
+    <div id="movieInfo"></div>
+</div>
+
+
+<section class="section quotes">
+    <h2 class="section-heading">Famous quotes in films</h2>
+    <div class="quote">
+        <blockquote>"People always say that time changes things, but in reality you have to change them yourself." </blockquote>
+        <p>— Jonatan Straing</p>
+    </div>
+    <div class="quote">
+        <blockquote>"Life is not what happens to you. It's how you react to it."</blockquote>
+        <p>— Stiven King</p>
+    </div>
+    <div class="quote">
+        <blockquote>"Every movie is essentially a riddle. And the better you solve it, the more fun you get."</blockquote>
+        <p>— Cristopher Nolan</p>
+    </div>
+</section>
+
+
+
+<footer>
+    <div class="footer-content">
+        <p>© 2024 KinoTime. Created by:</p>
+        <ul>
+            <li>Yerkezhan Akhmetova</li>
+            <li>Akmagambetova Aliya</li>
+        </ul>
+    </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>
