@@ -6,7 +6,7 @@
 
 }
 
-/* Watchlist Section Styling */
+
 #watchlist {
     min-height: 300px;
     background-color: #f9f9f9;
@@ -98,7 +98,7 @@ section h1{
 
 .movie-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 фильмов в строке */
+    grid-template-columns: repeat(5, 1fr); 
     gap: 20px;
     justify-content: center;
     padding: 20px;
@@ -133,7 +133,7 @@ section h1{
 }
 
 
-/* Заголовки секций */
+
 .section-heading {
     text-align: center;
     margin-top: 20px;
@@ -142,7 +142,7 @@ section h1{
     background-color: #eff4fd;
 }
 
-/* Movie and Actor Gallery */
+
 .movie-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -156,7 +156,7 @@ section h1{
     border: 1px solid #eff4fd;
     border-radius: 5px;
     padding: 10px;
-    box-sizing: border-box; /* Учитывает padding и border в расчет ширины элемента */
+    box-sizing: border-box; 
 }
 
 .movie-card h3{
@@ -165,12 +165,12 @@ section h1{
 
 .movie-card img{
     width: 100%;
-    height: 300px; /* Установите высоту по вашему выбору */
-    object-fit: cover; /* Обрезает изображение, чтобы сохранить пропорции и заполнить контейнер */
+    height: 300px; 
+    object-fit: cover; 
     border-radius: 5px;
 }
 
-/* Стили для футера */
+
 footer {
     background-color: #eff4fd;
     color: #111;
@@ -210,10 +210,10 @@ footer {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: black; /* Set background color to black */
-    border-radius: 50%; /* Optional: make the buttons circular */
-    width: 30px; /* Set width */
-    height: 30px; /* Set height */
+    background-color: black; 
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
 }
 
 .carousel-control-prev,
@@ -242,43 +242,43 @@ nav ul li a {
     color: #555;
     font-weight: bold;
 }
-/* Horizontal scroll container */
+
 .movie-container-horizontal {
     display: flex;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    gap: 20px; /* Adds more space between movies */
+    overflow-x: auto; 
+    gap: 20px; 
     padding: 15px;
-    white-space: nowrap; /* Prevents wrapping to the next line */
-    border: 1px solid #ddd; /* Optional border for visual separation */
+    white-space: nowrap; 
+    border: 1px solid #ddd; 
     border-radius: 10px;
-    background-color: #f9f9f9; /* Subtle background color */
-    scrollbar-width: thin; /* For Firefox */
+    background-color: #f9f9f9; 
+    scrollbar-width: thin; 
     scrollbar-color: #007bff #f1f1f1;
 }
 
 .movie-container-horizontal::-webkit-scrollbar {
-    height: 10px; /* Scrollbar height */
+    height: 10px; 
 }
 
 .movie-container-horizontal::-webkit-scrollbar-thumb {
-    background-color: #007bff; /* Scrollbar thumb color */
+    background-color: #007bff; 
     border-radius: 10px;
 }
 
 .movie {
-    flex: 0 0 auto; /* Prevent movies from shrinking or growing */
+    flex: 0 0 auto; 
     cursor: grab;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    width: 200px; /* Increased width for larger images */
+    width: 200px; 
     text-align: center;
 }
 
 .movie img {
     width: 100%;
-    height: 300px; /* Increased height for larger images */
+    height: 300px; 
     object-fit: cover;
     border-bottom: 2px solid #007bff;
 }
@@ -289,7 +289,7 @@ nav ul li a {
 }
 
 #watchlist {
-    min-height: 200px; /* Increased height to balance layout */
+    min-height: 200px; 
     background-color: #f9f9f9;
     border: 2px dashed #007bff;
     border-radius: 10px;
@@ -307,6 +307,6 @@ nav ul li a {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    font-size: 16px; /* Larger font size for movie titles */
+    font-size: 16px; 
     color: #333;
 }

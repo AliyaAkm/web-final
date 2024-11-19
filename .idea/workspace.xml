@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="218004ed-8dc6-4e20-915f-b52f80202da9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -22,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/review.js" beforeDir="false" afterPath="$PROJECT_DIR$/review.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style_contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/style_contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style_releases.css" beforeDir="false" afterPath="$PROJECT_DIR$/style_releases.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style_review.css" beforeDir="false" afterPath="$PROJECT_DIR$/style_review.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +65,8 @@
     "Node.js.index.js.executor": "Run",
     "Node.js.review.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "<unknown>",
-    "last_opened_file_path": "C:/Users/Анель/Desktop/web assig5",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Анель/Downloads/Telegram Desktop/final/final",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -114,7 +116,8 @@
       <workItem from="1730316382016" duration="8000" />
       <workItem from="1730880599533" duration="2476000" />
       <workItem from="1731947975290" duration="12706000" />
-      <workItem from="1732008502599" duration="17349000" />
+      <workItem from="1732008502599" duration="17977000" />
+      <workItem from="1732045692774" duration="895000" />
     </task>
     <servers />
   </component>

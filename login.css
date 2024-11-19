@@ -29,31 +29,30 @@ form input:focus {
     margin-top: 20px;
 }
 form button {
-    background: #808080; /* Set background to grey */
-    color: #fff; /* White text for contrast */
+    background: #808080; 
+    color: #fff; 
     border: none;
-    border-radius: 25px; /* Rounded edges */
-    padding: 12px 25px; /* Adjust padding for size */
-    font-size: 16px; /* Font size for better readability */
+    border-radius: 25px; 
+    padding: 12px 25px;
+    font-size: 16px; 
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 form button:hover {
-    background: #696969; /* Darker grey on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
+    background: #696969; 
+    transform: translateY(-2px); 
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); 
 
 
 .login-register {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 80px; /* Increase gap between the containers */
-    margin-top: 50px; /* Adjust top margin for better alignment */
-    margin-bottom: 50px; /* Add bottom space for separation from footer or other content */
+    gap: 80px; 
+    margin-top: 50px; 
+    margin-bottom: 50px; 
 }
 
 .container {
@@ -63,32 +62,32 @@ form button:hover {
     padding: 40px;
     max-width: 400px;
     width: 100%;
-    margin: 0 auto; /* Center the containers in the parent */
+    margin: 0 auto; 
 }
 .container form {
     width: 100%;
-    padding: 20px; /* Internal padding for better spacing within the form */
+    padding: 20px; 
 }
 nav {
-    position: fixed; /* Keeps the navbar fixed at the top */
+    position: fixed; 
     top: 0;
     left: 0;
-    width: 100%; /* Stretches the navbar across the screen */
-    background-color: #fff; /* White background */
-    z-index: 1000; /* Ensures it's above all other elements */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    width: 100%; 
+    background-color: #fff; 
+    z-index: 1000; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
     padding: 15px 0;
 }
 
 nav a {
-    color: grey; /* Default link color */
+    color: grey; 
     text-decoration: none;
     font-weight: bold;
     margin: 0 10px;
 }
 
 nav a:hover {
-    color: #ff9800; /* Highlight color on hover */
+    color: #ff9800; 
     text-decoration: underline;
 }
 
@@ -105,7 +104,7 @@ nav ul {
     font-weight: bold;
     color: grey;
     margin-right: auto;
-    padding-left: 20px; /* Space between the brand and links */
+    padding-left: 20px; 
 }
 
 .navbar-brand:hover {
@@ -114,5 +113,5 @@ nav ul {
 }
 
 body {
-    margin-top: 80px; /* Adds space to prevent content overlap with the navbar */
+    margin-top: 80px; 
 }

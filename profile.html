@@ -46,22 +46,22 @@
   <button id="logout">Logout</button>
 </div>
 <script>
-  // Check if user is logged in
+ 
   const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
   if (!currentUser) {
-    // Redirect to login page if not logged in
+
     alert('Please log in first.');
-    window.location.href = 'login.html'; // Changed redirection to login.html
+    window.location.href = 'login.html'; 
   } else {
-    // Display user information
+   
     document.getElementById('user-name').textContent = currentUser.username;
 
-    // Handle logout
+    
     document.getElementById('logout').addEventListener('click', () => {
-      localStorage.removeItem('currentUser'); // Remove session
+      localStorage.removeItem('currentUser'); 
       alert('You have logged out.');
-      window.location.href = 'login.html'; // Changed redirection to login.html
+      window.location.href = 'login.html'; 
     });
   }
 </script>

@@ -1,15 +1,12 @@
+const map = L.map('map').setView([20.0, 0.0], 2); 
 
-// Initialize the map
-const map = L.map('map').setView([20.0, 0.0], 2); // Worldview
-
-// MapTiler tiles (insert your API key here)
 L.tileLayer('https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=rlaIeONoI97q7tDb8QJD', {
     attribution: '&copy; <a href="https://www.maptiler.com/">MapTiler</a> contributors',
     tileSize: 512,
     zoomOffset: -1,
 }).addTo(map);
 
-// Movie locations
+
 const movieLocations = [
     {
         title: "The Lord of the Rings",
@@ -58,17 +55,17 @@ const movieLocations = [
     }
 ];
 
-// Custom marker icon
+
 const customIcon = L.icon({
     iconUrl: 'img/Clapperboard-PNG-Picture.png',
     iconSize: [40, 40],
     iconAnchor: [20, 40],
 });
 
-// Create a marker cluster group
+
 const markers = L.markerClusterGroup();
 
-// Add markers
+
 function addMarkers(locations) {
     markers.clearLayers();
     locations.forEach(movie => {
@@ -87,7 +84,7 @@ function addMarkers(locations) {
     map.addLayer(markers);
 }
 
-// Filter markers by genre
+
 document.getElementById('genre-filter').addEventListener('change', (event) => {
     const selectedGenre = event.target.value;
     if (selectedGenre === "all") {
@@ -98,7 +95,6 @@ document.getElementById('genre-filter').addEventListener('change', (event) => {
     }
 });
 
-// Add to favorites
 function addToFavorites(title) {
     const favoritesList = document.getElementById('favorites-list');
     const existingItem = Array.from(favoritesList.children).find(item => item.textContent === title);
@@ -111,5 +107,5 @@ function addToFavorites(title) {
     }
 }
 
-// Initial load
+
 addMarkers(movieLocations);

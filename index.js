@@ -160,6 +160,25 @@ function playSpiderManSound() {
     spiderManSound.play();
 }
 
+
+// Intersection Observer 
+const actorCards = document.querySelectorAll('.actor-card');
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            entry.target.classList.remove('hidden');
+        }
+    });
+}, { threshold: 0.5 });
+
+actorCards.forEach(card => {
+    card.classList.add('hidden');
+    observer.observe(card);
+});
+
+
 // АКТЕРЫ РАНГ
 // Top Actors/Directors Data
 const actorData = [

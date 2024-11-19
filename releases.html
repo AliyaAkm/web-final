@@ -9,24 +9,24 @@
     <link rel="stylesheet" href="style_releases.css">
     <style>
         .release-list li {
-            opacity: 0; /* Изначально скрыт */
-            transform: translateY(20px); /* Начинает немного ниже */
-            transition: opacity 0.5s ease, transform 0.5s ease; /* Анимация для прозрачности и позиции */
+            opacity: 0; 
+            transform: translateY(20px); 
+            transition: opacity 0.5s ease, transform 0.5s ease; 
         }
 
         .release-list li.visible {
-            opacity: 1; /* Появляется */
-            transform: translateY(0); /* Перемещается в исходное положение */
+            opacity: 1; 
+            transform: translateY(0); 
         }
         .number-sorter button,
         .color-changer button {
-            transition: background-color 0.3s, transform 0.3s; /* Эффект перехода */
+            transition: background-color 0.3s, transform 0.3s; 
         }
 
         .number-sorter button:hover,
         .color-changer button:hover {
-            background-color: #5a8c9e; /* Цвет фона при наведении */
-            transform: scale(1.05); /* Немного увеличивается при наведении */
+            background-color: #5a8c9e; 
+            transform: scale(1.05); 
         }
     </style>
 </head>
@@ -56,6 +56,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="login.html" style="color: grey;">Login</a>
             </li>
+            <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
         </ul>
     </div>
 </nav>
@@ -157,6 +158,31 @@
             </li>
         </ul>
     </section>
+
+
+    <div class="timeline-container">
+        <h2 class="timeline-title">Milestones in Cinema</h2>
+        <div class="timeline-item">
+          <h3>First Motion Picture</h3>
+          <p>The Lumière brothers debuted their first motion picture in Paris.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>The Jazz Singer</h3>
+          <p>The first movie with synchronized sound was released.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Golden Age of Hollywood</h3>
+          <p>Classics like <em>Gone with the Wind</em> and <em>The Wizard of Oz</em> premiered.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>First Fully CGI Film</h3>
+          <p>Pixar's <em>Toy Story</em> revolutionized animation.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>The Future of Cinema</h3>
+          <p>Streaming and VR reshape how we experience movies.</p>
+        </div>
+      </div>
 
     <section class="number-sorter">
         <h2>Number Sorting Tool</h2>

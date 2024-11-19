@@ -52,7 +52,7 @@ function showError(input, message) {
     error.style.color = 'red';
     error.textContent = message;
     parent.appendChild(error);
-    input.classList.add('is-invalid');  // Add Bootstrap's invalid class for styling
+    input.classList.add('is-invalid');  
 }
 
 // Helper function to clear errors

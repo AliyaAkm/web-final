@@ -50,12 +50,18 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-// Fade in movie items
+
 window.addEventListener('load', () => {
     const releaseItems = document.querySelectorAll('.release-list li');
     releaseItems.forEach((item, index) => {
         setTimeout(() => {
-            item.classList.add('visible'); // Add visible class after a delay
-        }, index * 200); // Delay for staggered effect
+            item.classList.add('visible'); 
+        }, index * 200); 
     });
 });
+
+document.querySelectorAll('.timeline-item').forEach(item => {
+    item.style.opacity = '1';
+    item.style.transform = 'translateX(0)';
+  });
+  

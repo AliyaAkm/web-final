@@ -1,16 +1,19 @@
+let carouselInterval;
+let currentSpeed = 3000; 
 
-//рейтинг
-// Получаем все блоки с рейтингом на странице
+const items = document.querySelectorAll('.carousel-item');
+let index = 0;
+
 document.querySelectorAll('.star-rating').forEach(ratingBlock => {
-    // В каждом блоке обрабатываем клики по звездочкам
+   
     ratingBlock.querySelectorAll('.star').forEach(star => {
         star.addEventListener('click', function () {
             const value = this.getAttribute('data-value');
 
-            // Сбрасываем цвет всех звездочек
+          
             ratingBlock.querySelectorAll('.star').forEach(s => s.textContent = '☆');
 
-            // Закрашиваем выбранные звезды
+           
             for (let i = 0; i < value; i++) {
                 ratingBlock.querySelectorAll('.star')[i].textContent = '★';
             }
@@ -20,24 +23,23 @@ document.querySelectorAll('.star-rating').forEach(ratingBlock => {
 
 document.querySelectorAll('.read-more').forEach(button => {
     button.addEventListener('click', function() {
-        // Получаем родительскую карточку
+       
         const card = this.closest('.card');
-        // Находим описание фильма внутри этой карточки
+       
         const description = card.querySelector('.movie-description');
 
-        // Переключаем видимость описания
+       
         if (description.style.display === 'none' || description.style.display === '') {
-            description.style.display = 'block'; // Показываем описание
-            this.textContent = 'Read Less'; // Меняем текст кнопки
+            description.style.display = 'block'; 
+            this.textContent = 'Read Less'; 
         } else {
-            description.style.display = 'none'; // Скрываем описание
-            this.textContent = 'Read More'; // Меняем текст кнопки
+            description.style.display = 'none'; 
+            this.textContent = 'Read More'; 
         }
     });
 });
 
 
-// to do list
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskText = taskInput.value.trim();
@@ -72,40 +74,39 @@ function toggleTask(taskElement) {
     taskElement.classList.toggle('completed');
 }
 
-// game
 function startGuessingGame() {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     let attempts = 0;
     let guess;
-    let gameCanceled = false; // Переменная для отслеживания отмены игры
+    let gameCanceled = false; 
 
     do {
         const userInput = prompt("Guess a number between 1 and 100:");
 
-        // Проверка на "Отмена"
+        
         if (userInput === null) {
             alert("Game canceled.");
-            gameCanceled = true; // Устанавливаем флаг отмены
-            break; // Прерываем цикл
+            gameCanceled = true; 
+            break; 
         }
 
-        // Преобразуем введенные данные в число
+    
         guess = parseInt(userInput, 10);
         attempts++;
 
-        // Проверка введенного числа
+      
         if (guess > randomNumber) {
             alert("Too high! Try again.");
         } else if (guess < randomNumber) {
             alert("Too low! Try again.");
         } else if (guess === randomNumber) {
             alert(`Congratulations! You guessed the number ${randomNumber} in ${attempts} attempts.`);
-            break; // Выходим из цикла, так как угадали число
+            break; 
         } else {
             alert("Please enter a valid number.");
         }
 
-    } while (guess !== randomNumber && !gameCanceled); // Выходим из цикла, если число угадано или игра отменена
+    } while (guess !== randomNumber && !gameCanceled); 
 }
 
 function allowDrop(event) {
@@ -118,26 +119,25 @@ function drop(event) {
 
     const watchlist = document.getElementById("watchlist");
 
-    // Check for duplicates
+   
     if ([...watchlist.children].some(item => item.textContent === movieTitle)) {
         alert("This movie is already in your watchlist!");
         return;
     }
 
-    // Create a new watchlist item
     const listItem = document.createElement("div");
     listItem.className = "watchlist-item";
     listItem.textContent = movieTitle;
 
-    // Add click event to remove the movie
+ 
     listItem.addEventListener("click", () => {
-        watchlist.removeChild(listItem); // Remove the item on click
+        watchlist.removeChild(listItem); 
     });
 
     watchlist.appendChild(listItem);
 }
 
-// Enable drag functionality for each movie
+
 document.querySelectorAll(".movie").forEach(movie => {
     movie.addEventListener("dragstart", event => {
         event.dataTransfer.setData("text", movie.getAttribute("data-title"));

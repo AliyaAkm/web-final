@@ -55,6 +55,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="contact.html" style="color: grey;">Contact</a>
             </li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
         </ul>
     </div>
 </nav>
@@ -130,45 +132,59 @@
 </section>
 
 
-<section class="famous-actors">
-    <h2 class="section-heading">Popular actors</h2>
-    <div class="actors-gallery">
-        <div class="actor-card">
-            <img src="https://funny.klev.club/smeh/uploads/posts/2024-04/funny-klev-club-kpxn-p-smeshnie-kartinki-leonardo-di-kaprio-v-mol-18.jpg" alt="Actor 1">
-            <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B8_%D0%9A%D0%B0%D0%BF%D1%80%D0%B8%D0%BE,_%D0%9B%D0%B5%D0%BE%D0%BD%D0%B0%D1%80%D0%B4%D0%BE" target="_blank">
-                <h3 class="actor-name">Leonardo DiCaprio</h3>
-            </a>
-        </div>
-        <div class="actor-card">
-            <img src="https://uznayvse.ru/images/catalog/2022/2/emma-stone_84.jpg" alt="Actor 2">
-            <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%BE%D1%83%D0%BD,_%D0%AD%D0%BC%D0%BC%D0%B0" target="_blank">
-                <h3 class="actor-name">Emma Stone</h3>
-            </a>
-        </div>
-        <div class="actor-card">
-            <img src="https://insider.ua/wp-content/uploads/2024/07/robert-dauni-ml.jpeg" alt="Actor 3">
-            <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B0%D1%83%D0%BD%D0%B8,_%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82_(%D0%BC%D0%BB%D0%B0%D0%B4%D1%88%D0%B8%D0%B9)" target="_blank">
-                <h3 class="actor-name">Robert Downey Jr.</h3>
-            </a>
-        </div>
-        <div class="actor-card">
-            <img src="https://uznayvse.ru/images/catalog/2022/1/jennifer-aniston_33.jpg" alt="Актер 4">
-            <a href="https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D0%B8%D1%81%D1%82%D0%BE%D0%BD,_%D0%94%D0%B6%D0%B5%D0%BD%D0%BD%D0%B8%D1%84%D0%B5%D1%80" target="_blank">
-                <h3 class="actor-name">Jennifer Aniston</h3>
-            </a>
-        </div>
-    </div>
-    <div id="actors-chart-container" style="height: 400px; margin-top: 20px;"></div>
-</section>
-
-
 <br>
 <h2 align="center">Find information about the movie</h2>
 <div id="movieContainer">
-    <input type="text" id="movieTitle" placeholder="Введите название фильма">
-    <button id="getMovieBtn">Найти фильм</button>
+    <input type="text" id="movieTitle" placeholder="Enter the name of movie">
+    <button id="getMovieBtn">Find films</button>
     <div id="movieInfo"></div>
 </div>
+
+
+
+<section class="famous-actors">
+    <h2 class="section-heading">Popular Actors</h2>
+    <div class="actors-gallery">
+        <div class="actor-card">
+            <img src="https://funny.klev.club/smeh/uploads/posts/2024-04/funny-klev-club-kpxn-p-smeshnie-kartinki-leonardo-di-kaprio-v-mol-18.jpg" alt="Leonardo Di Caprio">
+            <div class="actor-info">
+                <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B8_%D0%9A%D0%B0%D0%BF%D1%80%D0%B8%D0%BE,_%D0%9B%D0%B5%D0%BE%D0%BD%D0%B0%D1%80%D0%B4%D0%BE" target="_blank">
+                    <h3 class="actor-name">Leonardo Di Caprio</h3>
+                </a>
+                <p>Leonardo DiCaprio is known for his role in films such as Titanic, Inception, and The Revenant.</p>
+            </div>
+        </div>
+        <div class="actor-card">
+            <img src="https://uznayvse.ru/images/catalog/2022/2/emma-stone_84.jpg" alt="Emma Stone">
+            <div class="actor-info">
+                <a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%BE%D1%83%D0%BD,_%D0%AD%D0%BC%D0%BC%D0%B0" target="_blank">
+                    <h3 class="actor-name">Emma Stone</h3>
+                </a>
+                <p>Emma Stone is a talented actress known for her roles in La La Land and Easy A.</p>
+            </div>
+        </div>
+        <div class="actor-card">
+            <img src="https://insider.ua/wp-content/uploads/2024/07/robert-dauni-ml.jpeg" alt="Robert Downey Jr.">
+            <div class="actor-info">
+                <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B0%D1%83%D0%BD%D0%B8,_%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82_(%D0%BC%D0%BB%D0%B0%D0%B4%D1%88%D0%B8%D0%B9)" target="_blank">
+                    <h3 class="actor-name">Robert Downey Jr.</h3>
+                </a>
+                <p>Famous for his portrayal of Tony Stark/Iron Man in the Marvel Cinematic Universe.</p>
+            </div>
+        </div>
+        <div class="actor-card">
+            <img src="https://uznayvse.ru/images/catalog/2022/1/jennifer-aniston_33.jpg" alt="Jennifer Aniston">
+            <div class="actor-info">
+                <a href="https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D0%B8%D1%81%D1%82%D0%BE%D0%BD,_%D0%94%D0%B6%D0%B5%D0%BD%D0%BD%D0%B8%D1%84%D0%B5%D1%80" target="_blank">
+                    <h3 class="actor-name">Jennifer Aniston</h3>
+                </a>
+                <p>Known for her iconic role as Rachel Green in the TV series Friends.</p>
+            </div>
+        </div>
+        <div id="actors-chart-container" style="height: 400px; margin-top: 20px;"></div>
+</section>
+
+
 
 
 <section class="section quotes">
